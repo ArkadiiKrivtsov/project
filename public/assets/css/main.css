@@ -15390,6 +15390,7 @@ html.mm-opening .mm-slideout {
 }
 
 .slider {
+  margin: 1%;
   width: 375px;
   height: 450px;
   overflow: hidden;
@@ -15463,4 +15464,49 @@ input[name="r"] {
   display: block;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2rem;
+}
+
+.inline-block {
+  display: inline-block;
+  margin: 1%;
+  margin-left: 7%;
+  margin-right: -5%;
+  margin-bottom: 2%;
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+}
+
+.hover\:bg-opacity-70:hover {
+  --tw-bg-opacity: 0.7;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.py-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-4 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
