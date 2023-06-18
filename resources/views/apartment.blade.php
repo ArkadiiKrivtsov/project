@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head> 
     <meta charset="UTF-8">
-    <title>Обзор квартиры</title>
+    <title>Главная</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Favicon-->
-    <link rel="shortcut icon" href="../images/icon/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/images/icon/favicon.png') }}" type="image/x-icon">
 
     <!-- Web Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Pacifico%7CSource+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;amp;subset=latin-ext,vietnamese" rel="stylesheet">
 
     <!-- Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/animate/animated.css">
-    <link rel="stylesheet" type="text/css" href="../libs/owl.carousel.min/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-    <link rel="stylesheet" type="text/css" href="../libs/direction/css/noJS.css">
-    <link rel="stylesheet" type="text/css" href="../libs/prettyphoto-master/css/prettyPhoto.css">
-    <link rel="stylesheet" type="text/css" href="../libs/slick-sider/slick.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/countdown-timer/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/libs/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/libs/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/libs/animate/animated.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/libs/owl.carousel.min/owl.carousel.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/libs/pe-icon-7-stroke/css/pe-icon-7-stroke.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/libs/direction/css/noJS.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/libs/prettyphoto-master/css/prettyPhoto.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/libs/slick-sider/slick.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/libs/countdown-timer/css/demo.css') }}">
 
     <!-- Template CSS-->
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/home.css') }}">
 
 
   </head>
+
   <body class="home main-home">
 
       <header class="header yolo-header-style-1">
@@ -58,7 +59,7 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="header-logo">
-                  <h1><a href="home.html"><img src="../images/logo/logo.png" alt="logo"/></a></h1>
+                  <h1><a href="/"><img src="{{ asset('assets/images/logo/logo.png') }}" alt="logo"/></a></h1>
                 </div>
               </div>
               <div class="col-md-8">
@@ -78,7 +79,7 @@
               <div class="header-left">
                 <nav  class="main-nav">
                   <ul class="nav">
-                    <li class="active menu-item menu-home"><a href="home.html">Главная</a>
+                    <li class="active menu-item menu-home"><a href="/">Главная</a>
                     </li>
                     <li class="menu-item menu-blog"><a href="catalog.html">Каталог</a>
                     </li>
@@ -96,10 +97,10 @@
            <input type="radio" name="r" id="r1" checked>
            <input type="radio" name="r" id="r2">
            <div class="slide s1">
-              <img src="../images/demo/product-1.jpg" alt="Изображение" class="img">
+              <img src="{{ asset('assets/images/demo/product-1.jpg') }}" alt="Изображение" class="img">
            </div>
            <div class="slide">
-              <img src="../images/demo/product-1-2.jpg" alt="Изображение" class="img">
+              <img src="{{ asset('assets/images/demo/product-1-2.jpg') }}" alt="Изображение" class="img">
            </div>
         </div>
         <div class="navigation">
