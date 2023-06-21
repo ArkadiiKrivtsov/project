@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('square');
             $table->integer('floor');
             $table->string('address');
+            $table->string('description')->nullable();
             $table->string('image_plan');
             $table->string('image_final_view');
             $table->timestamps();
