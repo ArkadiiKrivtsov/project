@@ -5,10 +5,10 @@
            <input type="radio" name="r" id="r1" checked>
            <input type="radio" name="r" id="r2">
            <div class="slide s1">
-              <img src="{{ asset('assets/images/demo/product-1.jpg') }}" alt="Изображение" class="img">
+              <img src="{{ asset('assets/images/demo/' . $apartment->image_final_view) }}" alt="Изображение" class="img">
            </div>
            <div class="slide">
-              <img src="{{ asset('assets/images/demo/product-1-2.jpg') }}" alt="Изображение" class="img">
+              <img src="{{ asset('assets/images/demo/' . $apartment->image_plan) }}" alt="Изображение" class="img">
            </div>
         </div>
         <div class="navigation">
@@ -27,11 +27,11 @@
 
     <div class="apartment_discribe">
         <h>
-            <p style="text-indent: 25px;">Отличная трехкомнатная квартира в современном монолитном доме, квартира расположена в корпусе В, который максимально удален от проспекта, очень тихо, функциональная планировка, квартира на 3 стороны света, 5 окон, легко переделать в 4-х комнатную квартиру, в доме двухуровневый подземный паркинг, охраняемая закрытая территория с детскими и спортивными площадками, видеонаблюдение, шлагбаум, рядом с домом отличные школы с высоким рейтингом, спорткомплекс с бассейном, битцевский лесопарк, пруды, квартира в собственности, без обременений, свободная продажа.</p>
+            <p style="text-indent: 25px;"><?=htmlspecialchars($apartment->description)?></p>
         </h>
-        <p>Цена: 9 900 000 RUB</p>
-        <p>Площадь: 102 кв.м</p> 
-        <p>Этаж: 3</p>  
+        <p>Цена: <?=htmlspecialchars($apartment->price)?> RUB</p>
+        <p>Площадь: <?=htmlspecialchars($apartment->square)?> м²</p> 
+        <p>Этаж: <?=htmlspecialchars($apartment->floor)?></p>  
     </div>
      
 @include('layout.footer')

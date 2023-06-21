@@ -1,5 +1,8 @@
 @include('layout.header')
 
+
+
+
       <div id="example-wrapper">
         <div class="div-box">
           <div class="slider-home slider-home-1">
@@ -21,31 +24,12 @@
             <div class="container">
               <div class="home-1-banner-content">
                 <div class="row">
-                  <div class="col-md-4 col-sm-4">
-                    <div class="product-item-wrap product-style_1">
-                      <div class="product-item-inner">
-                        <div class="product-thumb">
-                          <div class="product-flash-wrap"><span class="on-new product-flash">New</span></div>
-                          <div class="product-thumb-primary"><img src="{{ asset('assets/images/demo/product-1.jpg') }}" alt="product1" width="375" height="450" class="attachment-shop_catalog size-shop_catalog wp-post-image"/></div><a href="/apartment" class="product-link">
-                            <div class="nxt_b"></div>
-                            <div class="product-hover-sign">
-                              <hr/>
-                              <hr/>
-                            </div></a>
-                          <div class="product-info">
-                            <span class="price">15 000 000.00<span class="fa fa-rub"></span></span></span><a href="apartment.html">
-                              <h3>51,19 м²</h3>
-                              <h3>3/13 эт.</h3>
-                            </a>
-                          </div>
-                          <div class="product-actions">
-                            <a href="/apartment" class="product-quick-view"><i class="fa fa-search"></i>Смотреть</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-4">
+                    @foreach ($apartments as $apartment)
+                        @include('blocks.home_block', ['apartment' => $apartment])
+                    @endforeach
+
+                  
+                  {{-- <div class="col-md-4 col-sm-4">
                     <div class="product-item-wrap product-style_1">
                       <div class="product-item-inner">
                         <div class="product-thumb">
@@ -90,7 +74,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> --}}
 
                 </div>
               </div>

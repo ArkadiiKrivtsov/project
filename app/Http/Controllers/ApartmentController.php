@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 class ApartmentController extends Controller
 {
-    public function apartment()
+    public function apartment($id)
     {
-        $apartments = Apartment::all();
-
-        return view('apartment', ['apartments' => $apartments]);
+        $apartment = Apartment::find($id);
+        
+        return view('apartment', ['apartment' => $apartment]);
     }
 
 
