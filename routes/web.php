@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'home']);
-Route::get('/apartment', [ApartmentController::class, 'apartment']);
+Route::get('/apartment/{id}', [ApartmentController::class, 'apartment']);
