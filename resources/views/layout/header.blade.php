@@ -48,6 +48,8 @@
                     </li>
                     <li class="menu-item menu-blog"><a href="/">Каталог</a>
                     </li>
+                    <li class="menu-item menu-blog"><a href="/admin_section">Административный раздел</a>
+                    </li>
                   </ul>
                 </nav>
                 <!-- .header-main-nav-->
