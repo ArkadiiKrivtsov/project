@@ -1,6 +1,6 @@
 @extends('layout.layout')
 
-   @section('title') Главная @endsection
+   @section('title') Обзор квартиры @endsection
 
       @section('content')
       
