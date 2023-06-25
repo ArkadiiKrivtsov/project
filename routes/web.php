@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminSectionController;
 use App\Http\Controllers\ApartmentController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\CreateApartmentController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,5 @@ Route::get('/', [HomeController::class, 'home']);
 Route::get('/apartment/{id}', [ApartmentController::class, 'apartment']);
 Route::get('/admin_section', [AdminSectionController::class, 'adminSection']);
 Route::get('/catalog', [CatalogController::class, 'catalog']);
+Route::get('/create', [CreateApartmentController::class, 'createApartment']);
+Route::post('/create', [CreateApartmentController::class, 'addApartment']);

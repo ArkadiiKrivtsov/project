@@ -12,7 +12,7 @@
                     <div class="slider-content slider-1-content">
                       <h2>Купи</h2>
                       <h6>дом</h6>
-                      <p><a href="/apartment" class="btn btn-1">Открыть каталог</a>
+                      <p><a href="/catalog" class="btn btn-1">Открыть каталог</a>
                     </div>
                   </div>
                 </div>

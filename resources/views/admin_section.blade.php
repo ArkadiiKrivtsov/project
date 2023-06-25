@@ -5,7 +5,14 @@
         @section('content')
 
         <main>
-            <div class="py-4 pb-8 space-y-4">    
+            <div class="center">
+                <button type="button" class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded" title="Добавить">
+                <a href="/create">Добавить новую квартиру</a>
+                </button>
+            </form>
+            </div>
+
+            <div class="py-4 pb-8 space-y-4">   
                 <table class="border border-collapse w-full">
                     <thead>
                         <tr>
