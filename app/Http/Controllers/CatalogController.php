@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Apartment;
 use Illuminate\Http\Request;
 
-class AdminSectionController extends Controller
+class CatalogController extends Controller
 {
-    public function adminSection()
+    public function catalog()
     {
         $apartments = Apartment::all();
 
-        return view('admin_section', ['apartments' => $apartments]);
+        return view('catalog', ['apartments' => $apartments]);
     }
 }

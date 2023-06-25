@@ -26,7 +26,12 @@
                   <div class="home-1-banner-content">
                     <div class="row">
                         @foreach ($apartments as $apartment)
+                            @section('icon_new')
+                            <div class="product-flash-wrap"><span class="on-new product-flash">New</span></div>
+                            @endsection
+
                             @include('blocks.home_block', ['apartment' => $apartment])
+
                         @endforeach
     
                   </div>
@@ -36,3 +41,4 @@
         </div>
 
     @endsection
+

@@ -27,7 +27,12 @@
     <!-- Template CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/home.css') }}">
-
+  
+  <style>
+      td, th{
+          border:1px solid black;
+      }
+  </style>
 
   </head>
 
