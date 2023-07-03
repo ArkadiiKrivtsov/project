@@ -12,7 +12,7 @@
         </a>
     </td>
     <td class="border px-4 py-2">
-        <a href="/" class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded" title="Удалить">
+        <a href="/create/{{$apartment->id}}" class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded" title="Удалить">
             <i class="fa fa-trash" aria-hidden="true"></i>
         </a>
     </td>
