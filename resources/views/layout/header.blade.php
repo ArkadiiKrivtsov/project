@@ -46,7 +46,7 @@
                   <ul class="nav">
                     <li class="active menu-item menu-home"><a href="/">Главная</a>
                     </li>
-                    <li class="menu-item menu-blog"><a href="/">Каталог</a>
+                    <li class="menu-item menu-blog"><a href="/catalog">Каталог</a>
                     </li>
                     <li class="menu-item menu-blog"><a href="/admin_section">Административный раздел</a>
                     </li>
