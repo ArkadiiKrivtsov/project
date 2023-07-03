@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('floor');
             $table->string('address');
             $table->string('description')->nullable();
-            $table->string('image_plan');
-            $table->string('image_final_view');
+            $table->string('image_plan')->nullable();;
+            $table->string('image_final_view')->nullable();;
             $table->timestamps();
         });
     }
