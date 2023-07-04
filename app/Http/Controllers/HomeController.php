@@ -11,6 +11,6 @@ class HomeController extends Controller
     {
         $apartments = Apartment::all();
 
-        return view('home', ['apartments' => $apartments]);
+        return view('home', ['apartments' => $apartments->take(3)]);
     }
 }

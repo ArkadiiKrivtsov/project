@@ -7,12 +7,12 @@
     <td class="border px-4 py-2">{{ $apartment->floor }}</td>
     <td class="border px-4 py-2">{{ $apartment->rooms }}</td>
     <td class="border px-4 py-2">
-        <a href="/" class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded" title="Редактировать">
+        <a href="/update/{{$apartment->id}}" class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded" title="Редактировать">
             <i class="fa fa-pencil" aria-hidden="true"></i>
         </a>
     </td>
     <td class="border px-4 py-2">
-        <a href="/create/{{$apartment->id}}" class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded" title="Удалить">
+        <a href="/delete/{{$apartment->id}}" class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded" title="Удалить">
             <i class="fa fa-trash" aria-hidden="true"></i>
         </a>
     </td>

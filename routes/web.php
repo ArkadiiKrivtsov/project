@@ -26,4 +26,6 @@ Route::get('/admin_section', [AdminSectionController::class, 'adminSection']);
 Route::get('/catalog', [CatalogController::class, 'catalog']);
 Route::get('/create', [CRUDApartmentController::class, 'read']);
 Route::post('/create', [CRUDApartmentController::class, 'create']);
-Route::get('/create/{id}', [CRUDApartmentController::class, 'delete']);
+Route::get('/delete/{id}', [CRUDApartmentController::class, 'delete']);
+Route::get('/update/{id}', [CRUDApartmentController::class, 'updateForm']);
+Route::post('/update', [CRUDApartmentController::class, 'update']);
