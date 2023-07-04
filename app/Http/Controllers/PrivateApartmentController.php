@@ -5,8 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Apartment;
 use Illuminate\Http\Request;
 
-class CRUDApartmentController extends Controller
+class PrivateApartmentController extends Controller
 {
+    public function load($id)
+    {
+        $apartment = Apartment::find($id);
+        
+        return view('apartment', ['apartment' => $apartment]);
+    }
+
     public function read()
     {
         return view('create_apartment');
