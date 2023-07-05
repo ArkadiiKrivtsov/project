@@ -10,7 +10,7 @@ class PrivateApartmentController extends Controller
     public function load($id)
     {
         $apartment = Apartment::find($id);
-        
+
         return view('apartment', ['apartment' => $apartment]);
     }
 
@@ -22,7 +22,7 @@ class PrivateApartmentController extends Controller
     public function create(Request $request)
     {
         $input = $request->all();
-        
+
         $apartment = new Apartment();
 
         $apartment->address = $input['address'];
@@ -53,23 +53,27 @@ class PrivateApartmentController extends Controller
         return view('update_apartment', ['apartment' => $apartment]);
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        $input = $request->all();
-        
-        $apartment = Apartment::find($input['id']);
+        $apartment = Apartment::find($id);
 
-        isset($input['address']) ? $apartment->update(['address' => $input['address']]) : $apartment->address;
-        isset($input['rooms']) ? $apartment->update(['rooms' => $input['rooms']]) : $apartment->rooms;
-        isset($input['price']) ? $apartment->update(['price' => $input['price']]) : $apartment->price;
-        isset($input['square']) ? $apartment->update(['square' => $input['square']]) : $apartment->square;
-        isset($input['floor']) ? $apartment->update(['floor' => $input['floor']]) : $apartment->floor;
-        isset($input['description']) ? $apartment->update(['description' => $input['description']]) : $apartment->description;
-        isset($input['image_final_view']) ? $apartment->update(['image_final_view' => $input['image_final_view']->store('uploads', 'for_images')]) : $apartment->image_final_view;
-        isset($input['image_plan']) ? $apartment->update(['image_plan' => $input['image_plan']->store('uploads', 'for_images')]) : $apartment->image_plan;
+        $apartment->update([
+            'address' => $request['address'],
+            'rooms' => $request['rooms'],
+            'price' => $request['price'],
+            'square' => $request['square'],
+            'floor' => $request['floor'],
+            'description' => $request['description'],
+        ]);
         
+        if ($request->hasFile('image_final_view')) {
+            $apartment->update(['image_final_view' => $request['image_final_view']->store('uploads', 'for_images')]);
+        }
+       
+        if ($request->hasFile('image_plan')) {
+            $apartment->update(['image_plan' => $request['image_plan']->store('uploads', 'for_images')]);
+        }
+
         return redirect('/admin_section');
-
     }
 }
-

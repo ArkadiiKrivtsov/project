@@ -27,4 +27,4 @@ Route::get('/create', [PrivateApartmentController::class, 'read']);
 Route::post('/create', [PrivateApartmentController::class, 'create']);
 Route::get('/delete/{id}', [PrivateApartmentController::class, 'delete']);
 Route::get('/update/{id}', [PrivateApartmentController::class, 'updateForm']);
-Route::post('/update', [PrivateApartmentController::class, 'update']);
+Route::put('/update/{id}', [PrivateApartmentController::class, 'update']);
