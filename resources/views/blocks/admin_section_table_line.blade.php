@@ -1,6 +1,5 @@
 <tr>
     <td class="border px-4 py-2"><a href="/apartment/{{$apartment->id}}"><img src="{{ asset('assets/images/demo/' . $apartment->image_final_view) }}" alt="Изображение" class="img"></td>
-    <td class="border px-4 py-2">{{ $apartment->id }}</td>
     <td class="border px-4 py-2">{{ $apartment->address }}</td>
     <td class="border px-4 py-2">{{ $apartment->price }}₽</td>
     <td class="border px-4 py-2">{{ $apartment->square }} м²</td>
