@@ -9,8 +9,8 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $apartments = Apartment::all();
+        $apartments = Apartment::all()->take(3);
 
-        return view('home', ['apartments' => $apartments->take(3)]);
+        return view('home', ['apartments' => $apartments]);
     }
 }

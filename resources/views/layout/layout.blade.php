@@ -38,6 +38,22 @@
 
   <body class="home main-home">
     @include('layout.header')
+
+    <div align="center" style="padding-top:30px;">
+
+        @if (session()->has('success_message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+        @endif
+
+        @if (session()->has('error_message'))
+            <div class="alert alert-danger">
+                {{ session()->get('message') }}
+            </div>
+        @endif
+
+    </div>
       
         <div id="content">
             @yield('content')

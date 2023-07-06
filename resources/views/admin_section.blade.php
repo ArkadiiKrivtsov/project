@@ -7,21 +7,6 @@
 @section('content')
     <main>
 
-        <div align="center" style="padding-top:30px;">
-
-            @error('title')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
-
-            @if (session()->has('message'))
-                <div class="alert alert-success">
-                    {{ session()->get('message') }}
-                </div>
-            @endif
-
-        </div>
-
-
         <div align="center">
             <button type="button"
                 class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded"
