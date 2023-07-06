@@ -36,14 +36,14 @@ class PrivateApartmentController extends Controller
 
         $apartment->save();
 
-        return redirect('/admin_section');
+        return redirect('/admin_section')->with('message', 'Новая квартира успешно добавлена!');;
     }
 
     public function delete($id)
     {
         $apartment = Apartment::find($id);
         $apartment->delete();
-        return redirect('/admin_section');
+        return redirect('/admin_section')->with('message', 'Удалено успешно!');;
     }
 
     public function updateForm($id)
@@ -74,6 +74,6 @@ class PrivateApartmentController extends Controller
             $apartment->update(['image_plan' => $request['image_plan']->store('uploads', 'for_images')]);
         }
 
-        return redirect('/admin_section');
+        return redirect('/admin_section')->with('message', 'Данные успешно обновлены!');
     }
 }
