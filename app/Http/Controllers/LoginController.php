@@ -6,14 +6,14 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class AuthController extends Controller
+class LoginController extends Controller
 {
     public function loadPage(): View
     {
-        return view('auth_form');
+        return view('login_form');
     }
 
-    public function store(Request $request): RedirectResponse
+    public function login(Request $request): RedirectResponse
     {
         $validated = $request->validate([
             'email' => 'required',

@@ -5,6 +5,7 @@ use App\Http\Controllers\ApartmentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PrivateApartmentController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +31,5 @@ Route::get('/delete/{id}', [PrivateApartmentController::class, 'delete']);
 Route::get('/update/{id}', [PrivateApartmentController::class, 'updateForm']);
 Route::put('/update/{id}', [PrivateApartmentController::class, 'update']);
 
-Route::get('/auth', [AuthController::class, 'loadPage']);
-Route::post('/auth', [AuthController::class, 'store']);
+Route::get('/login', [LoginController::class, 'loadPage']);
+Route::post('/login', [LoginController::class, 'login']);

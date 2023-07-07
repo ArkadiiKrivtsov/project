@@ -20,7 +20,7 @@
             @endif
 
             <div class="mt-8 max-w-md">
-                <form method="post" action="/auth">
+                <form method="post" action="/login">
                     @csrf
                     <div class="grid grid-cols-1 gap-6">
 
