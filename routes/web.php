@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminSectionController;
 use App\Http\Controllers\ApartmentController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PrivateApartmentController;
@@ -28,3 +29,6 @@ Route::post('/create', [PrivateApartmentController::class, 'create']);
 Route::get('/delete/{id}', [PrivateApartmentController::class, 'delete']);
 Route::get('/update/{id}', [PrivateApartmentController::class, 'updateForm']);
 Route::put('/update/{id}', [PrivateApartmentController::class, 'update']);
+
+Route::get('/auth', [AuthController::class, 'loadPage']);
+Route::post('/auth', [AuthController::class, 'store']);

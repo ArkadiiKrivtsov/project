@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Apartment;
-use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class CatalogController extends Controller
 {
-    public function catalog()
+    public function catalog(): View
     {
         $apartments = Apartment::all();
 

@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Apartment;
-use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class AdminSectionController extends Controller
 {
-    public function adminSection()
+    public function adminSection(): View
     {
         $apartments = Apartment::all();
 

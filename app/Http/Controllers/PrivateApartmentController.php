@@ -4,24 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Models\Apartment;
 use Exception;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use SqlException;
+use Illuminate\View\View;
 
 class PrivateApartmentController extends Controller
 {
-    public function load($id)
+    public function load($id): View
     {
         $apartment = Apartment::find($id);
 
         return view('apartment', ['apartment' => $apartment]);
     }
 
-    public function read()
+    public function read(): View
     {
         return view('create_apartment');
     }
 
-    public function create(Request $request)
+    public function create(Request $request): RedirectResponse
     {
         $input = $request->all();
 
@@ -49,7 +50,7 @@ class PrivateApartmentController extends Controller
         }
     }
 
-    public function delete($id)
+    public function delete($id): RedirectResponse
     {
         try {
             $apartment = Apartment::find($id);
@@ -60,14 +61,14 @@ class PrivateApartmentController extends Controller
         }
     }
 
-    public function updateForm($id)
+    public function updateForm($id): View
     {
         $apartment = Apartment::find($id);
 
         return view('update_apartment', ['apartment' => $apartment]);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id): RedirectResponse
     {
         $apartment = Apartment::find($id);
 

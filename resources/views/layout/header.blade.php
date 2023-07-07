@@ -1,24 +1,4 @@
 <header class="header yolo-header-style-1">
-    <!-- самый верх шапки -->
-    <div class="yolo-top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="top-sidebar top-bar-left col-md-4">
-                    <aside id="text-11" class="widget widget_text">
-                        <div class="textwidget">
-                            <div>Добро пожаловать на купидом.ру!</div>
-                        </div>
-                    </aside>
-                </div>
-                <div class="top-sidebar top-bar-right col-md-8">
-                    <aside id="text-6" class="widget widget_text">
-                        <div class="textwidget"><i class="fa fa-home"></i> ул. Пушкина д.59, Москва <i
-                                style="margin-left: 15px" class="fa fa-phone"></i> 8800-777-55-55</div>
-                    </aside>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- лого и войти -->
     <div class="yolo-header-top yolo-header-top-style-1">
         <div class="container">
@@ -31,7 +11,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="header-customize header-customize-right">
-                        <a href="/login.php">
+                        <a href="/auth">
                             <div class="custom-text-wrapper header-customize-item"><i
                                     class='fa fa-check-square'></i></i>Войти</div>
                     </div>
@@ -61,7 +41,7 @@
         </div>
     </div>
 
-    <div align="center" style="padding-top:30px;">
+    <div align="center">
 
         @if (session()->has('message'))
             <div class="alert alert-success">
