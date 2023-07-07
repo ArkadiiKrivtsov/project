@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="header-customize header-customize-right">
-                        <a href="/auth">
+                        <a href="/login">
                             <div class="custom-text-wrapper header-customize-item"><i
                                     class='fa fa-check-square'></i></i>Войти</div>
                     </div>
