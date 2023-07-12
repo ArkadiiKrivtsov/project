@@ -1,11 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminSectionController;
-use App\Http\Controllers\ApartmentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PrivateApartmentController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,5 +29,10 @@ Route::get('/delete/{id}', [PrivateApartmentController::class, 'delete']);
 Route::get('/update/{id}', [PrivateApartmentController::class, 'updateForm']);
 Route::put('/update/{id}', [PrivateApartmentController::class, 'update']);
 
-Route::get('/login', [LoginController::class, 'loadPage']);
-Route::post('/login', [LoginController::class, 'login']);
+Route::get('/login', [AuthController::class, 'loadLoginPage']);
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/register', [AuthController::class, 'loadRegisterPage']);
+Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/logout', [AuthController::class, 'logout']);
