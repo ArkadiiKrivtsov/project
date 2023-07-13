@@ -10,11 +10,21 @@
                     </div>
                 </div>
                 <div class="col-md-8">
+                    @guest("web")
                     <div class="header-customize header-customize-right">
                         <a href="/login">
                             <div class="custom-text-wrapper header-customize-item"><i
                                     class='fa fa-check-square'></i></i>Войти</div>
                     </div>
+                    @endguest
+                    
+                    @auth
+                    <div class="header-customize header-customize-right">
+                        <a href="/logout">
+                            <div class="custom-text-wrapper header-customize-item"><i
+                                    class='fa fa-check-square'></i></i>Выйти</div>
+                    </div>
+                    @endauth
                 </div>
             </div>
         </div>
