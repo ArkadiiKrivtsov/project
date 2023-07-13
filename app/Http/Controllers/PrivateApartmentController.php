@@ -96,4 +96,9 @@ class PrivateApartmentController extends Controller
             return redirect('/admin_section')->with('error', 'Ошибка обновления базы данных! Попробуйте снова.');
         }
     }
+
+    public function loadBuyPage(): View
+    {
+        return view('buy');
+    }
 }

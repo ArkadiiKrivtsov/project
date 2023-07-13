@@ -18,11 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'home']);
+Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/apartment/{id}', [PrivateApartmentController::class, 'load']);
 Route::get('/catalog', [CatalogController::class, 'catalog']);
+Route::get('/buy', [PrivateApartmentController::class, 'loadBuyPage']);
 
-Route::middleware('auth')->group(function () {
+Route::middleware("auth")->group(function () {
     Route::get('/admin_section', [AdminSectionController::class, 'adminSection']);
     Route::get('/create', [PrivateApartmentController::class, 'read']);
     Route::post('/create', [PrivateApartmentController::class, 'create']);
@@ -32,9 +33,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthController::class, 'logout']);
 });
 
-Route::middleware('guest')->group(function () {
+Route::middleware("guest")->group(function () {
     Route::get('/login', [AuthController::class, 'loadLoginPage']);
-    Route::post('/login', [AuthController::class, 'login']);
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
     Route::get('/register', [AuthController::class, 'loadRegisterPage']);
     Route::post('/register', [AuthController::class, 'register']);
 });

@@ -41,8 +41,10 @@
                             </li>
                             <li class="menu-item menu-blog"><a href="/catalog">Каталог</a>
                             </li>
+                            @auth
                             <li class="menu-item menu-blog"><a href="/admin_section">Административный раздел</a>
                             </li>
+                            @endauth
                         </ul>
                     </nav>
                     <!-- .header-main-nav-->
