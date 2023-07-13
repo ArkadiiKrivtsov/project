@@ -20,19 +20,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/apartment/{id}', [PrivateApartmentController::class, 'load']);
-Route::get('/admin_section', [AdminSectionController::class, 'adminSection']);
-
 Route::get('/catalog', [CatalogController::class, 'catalog']);
-Route::get('/create', [PrivateApartmentController::class, 'read']);
-Route::post('/create', [PrivateApartmentController::class, 'create']);
-Route::get('/delete/{id}', [PrivateApartmentController::class, 'delete']);
-Route::get('/update/{id}', [PrivateApartmentController::class, 'updateForm']);
-Route::put('/update/{id}', [PrivateApartmentController::class, 'update']);
 
-Route::get('/login', [AuthController::class, 'loadLoginPage']);
-Route::post('/login', [AuthController::class, 'login']);
+Route::middleware('auth')->group(function () {
+    Route::get('/admin_section', [AdminSectionController::class, 'adminSection']);
+    Route::get('/create', [PrivateApartmentController::class, 'read']);
+    Route::post('/create', [PrivateApartmentController::class, 'create']);
+    Route::get('/delete/{id}', [PrivateApartmentController::class, 'delete']);
+    Route::get('/update/{id}', [PrivateApartmentController::class, 'updateForm']);
+    Route::put('/update/{id}', [PrivateApartmentController::class, 'update']);
+    Route::get('/logout', [AuthController::class, 'logout']);
+});
 
-Route::get('/register', [AuthController::class, 'loadRegisterPage']);
-Route::post('/register', [AuthController::class, 'register']);
-
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'loadLoginPage']);
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::get('/register', [AuthController::class, 'loadRegisterPage']);
+    Route::post('/register', [AuthController::class, 'register']);
+});
