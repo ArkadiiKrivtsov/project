@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
+    public function apartment()
+    {
+        return $this->belongsTo(Apartment::class);
+    }
+
+    public function bank()
+    {
+        return $this->ObelongsToe(Bank::class);
+    }
 }

@@ -12,4 +12,5 @@ class Apartment extends Model
     protected $fillable = [
         'rooms', 'price', 'square', 'floor', 'address', 'image_plan', 'image_final_view', 'description',
     ];
+
 }

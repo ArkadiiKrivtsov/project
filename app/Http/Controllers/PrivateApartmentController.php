@@ -97,8 +97,4 @@ class PrivateApartmentController extends Controller
         }
     }
 
-    public function loadBuyPage(): View
-    {
-        return view('buy');
-    }
 }

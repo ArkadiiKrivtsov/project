@@ -21,7 +21,7 @@
          </div>
       </div>
      
-      <button onclick="window.location.href = '/buy';" type="button" class="inline-block bg-red-600 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded">
+      <button onclick="window.location.href = '/buy/{{$apartment->id}}';" type="button" class="inline-block bg-red-600 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded">
        Купить
       </button>
 

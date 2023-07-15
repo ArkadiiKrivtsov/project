@@ -1,13 +1,13 @@
 @extends('layout.layout')
 
 @section('title')
-    Регистрация
+    Регистрация нового сотрудника
 @endsection
 
 @section('content')
     <main class="flex-1 container mx-auto bg-white overflow-hidden px-4 sm:px-6">
         <div class="py-4 pb-8">
-            <h2> Регистрация </h2>
+            <h2> Регистрация нового сотрудника </h2>
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="block">
-                            <label for="field1" class="py-4 text-gray-700 font-bold">Введите пароль</label>
+                            <label for="field1" class="py-4 text-gray-700 font-bold">Придумайте пароль</label>
                             <input name="password" id="password" type="password"
                                 class="mt-1 block w-full rounded-md border-gray-300  shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
@@ -53,11 +53,11 @@
                         <div class="block">
                             <button type="submit"
                                 class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded">
-                                Зарегистрироваться
+                                Зарегистрировать
                             </button>
-                            <button onclick="window.location.href = '/login';" type="reset"
+                            <button onclick="window.location.href = '/users';" type="reset"
                                 class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded">
-                                У меня уже есть аккаунт
+                                Вернуться к списку
                             </button>
                         </div>
                     </div>

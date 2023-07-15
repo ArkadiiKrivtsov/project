@@ -52,7 +52,7 @@ class AuthController extends Controller
             auth("web")->login($user);
         }
 
-        return redirect('/')->with('message', 'Вы успешно зарегистрировались!');;
+        return redirect('/users')->with('message', 'Новый сотрудник успешно добавлен!');;
     }
 
     public function logout(): RedirectResponse
