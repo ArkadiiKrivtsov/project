@@ -97,4 +97,13 @@ class PrivateApartmentController extends Controller
         }
     }
 
+
+    public function bankList($id): View
+    {
+        $apartment = Apartment::find($id);
+
+        //тут отображение списка
+    }
+    
+
 }

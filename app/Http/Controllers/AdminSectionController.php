@@ -23,21 +23,21 @@ class AdminSectionController extends Controller
     public function ordersTable(): View
     {
         $orders = Order::all();
-     
+
         return view('orders_table', ['orders' => $orders]);
     }
 
     public function usersTable(): View
     {
         $users = User::all();
-     
+
         return view('users_table', ['users' => $users]);
     }
 
     public function readBanksTable(): View
     {
         $banks = Bank::all();
-     
+
         return view('banks_table', ['banks' => $banks]);
     }
 
@@ -63,7 +63,6 @@ class AdminSectionController extends Controller
             $bank->save();
 
             return redirect('/banks')->with('message', 'Новый банк успешно добавлен!');
-        
         } catch (Exception $e) {
 
             return redirect('/createBank')->with('error', 'Ошибка добавления в базу данных! Попробуйте снова.');
@@ -86,5 +85,29 @@ class AdminSectionController extends Controller
         $bank = Bank::find($id);
 
         return view('update_bank_form', ['bank' => $bank]);
+    }
+
+    public function updateBank(Request $request, $id): RedirectResponse
+    {
+        $bank = Bank::find($id);
+        
+        $data = $request->validate([
+            'name' => ['required', 'string', 'unique:banks,name'],
+            'first_payment' => ['required', 'integer'],
+            'percent' => ['required', 'integer']
+        ]);
+
+        try {
+
+            $bank->update([
+                'name' => $data['name'],
+                'first_payment' => $data['first_payment'],
+                'percent' => $data['percent'],
+            ]);
+            return redirect('/banks')->with('message', 'Данные успешно обновлены!');
+        } catch (Exception $e) {
+
+            return redirect('/banks')->with('error', 'Ошибка обновления базы данных! Попробуйте снова.');
+        }
     }
 }

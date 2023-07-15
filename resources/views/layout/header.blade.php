@@ -44,7 +44,7 @@
                             @auth
                             <li class="menu-item menu-blog"><a href="/banks">Список банков</a>
                             </li>
-                            <li class="menu-item menu-blog"><a href="/admin_section">Редактор товаров</a>
+                            <li class="menu-item menu-blog"><a href="/admin_section">Список квартир</a>
                             </li>
                             <li class="menu-item menu-blog"><a href="/orders">Актуальные заказы</a>
                             </li>

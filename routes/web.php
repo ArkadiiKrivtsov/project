@@ -26,6 +26,8 @@ Route::get('/catalog', [CatalogController::class, 'catalog']);
 Route::get('/buy/{id}', [OrderController::class, 'loadOrderPage']);
 Route::post('/buy/{id}', [OrderController::class, 'makeOrder']);
 
+Route::get('/mortgage/{id}', [PrivateApartmentController::class, 'bankList']);
+
 
 Route::middleware("auth")->group(function () {
     Route::get('/admin_section', [AdminSectionController::class, 'productEditor']);

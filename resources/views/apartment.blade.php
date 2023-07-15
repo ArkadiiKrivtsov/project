@@ -25,7 +25,7 @@
        Купить
       </button>
 
-      <button type="button" class="inline-block bg-red-600 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded">
+      <button onclick="window.location.href = '/mortgage/{{$apartment->id}}';" type="button" class="inline-block bg-red-600 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded">
        Оформить ипотеку
       </button>
  
