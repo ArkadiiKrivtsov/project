@@ -1,13 +1,13 @@
 @extends('layout.layout')
 
 @section('title')
-    Регистрация нового сотрудника
+    Добавление нового банка
 @endsection
 
 @section('content')
     <main class="flex-1 container mx-auto bg-white overflow-hidden px-4 sm:px-6">
         <div class="py-4 pb-8">
-            <h2> Регистрация нового сотрудника </h2>
+            <h2> Добавление нового банка </h2>
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -20,44 +20,38 @@
             @endif
 
             <div class="mt-8 max-w-md">
-                <form method="post" action="/register">
+                <form method="post" action="/createBank">
                     @csrf
                     <div class="grid grid-cols-1 gap-6">
 
                         <div class="block">
-                            <label for="field1" class="py-4 text-gray-700 font-bold">Введите ФИО</label>
+                            <label for="field1" class="py-4 text-gray-700 font-bold">Введите название банка</label>
                             <input name="name" type="text" id="name" value="{{ old('name') }}"
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                placeholder="Иванов Иван Иванович">
+                                placeholder="Привер: ООО 'ВТБ'">
                         </div>
 
                         <div class="block">
-                            <label for="field1" class="py-4 text-gray-700 font-bold">Введите почту</label>
-                            <input name="email" type="email" id="email" value="{{ old('email') }}"
+                            <label for="field1" class="py-4 text-gray-700 font-bold">Укажите первоначальный взнос, %</label>
+                            <input name="first_payment" type="number" id="first_payment" value="{{ old('first_payment') }}"
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                placeholder="mail@example.ru">
+                                placeholder="5">
                         </div>
 
                         <div class="block">
-                            <label for="field1" class="py-4 text-gray-700 font-bold">Придумайте пароль</label>
-                            <input name="password" id="password" type="password"
-                                class="mt-1 block w-full rounded-md border-gray-300  shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                        </div>
-
-                        <div class="block">
-                            <label for="field1" class="py-4 text-gray-700 font-bold">Повторите пароль</label>
-                            <input name="password_confirmation" id="password_confirmation" type="password"
+                            <label for="field1" class="py-4 text-gray-700 font-bold">Укажите годовой процент, %</label>
+                            <input name="percent" id="percent" type="number" value="{{ old('percent') }}" placeholder="5"
                                 class="mt-1 block w-full rounded-md border-gray-300  shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
 
                         <div class="block">
                             <button type="submit"
                                 class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded">
-                                Зарегистрировать
+                                Сохранить и добавить
                             </button>
-                            <button onclick="window.location.href = '/users';" type="reset"
+                            <button onclick="window.location.href = '/banks';" type="reset"
                                 class="inline-block bg-lime-700 hover:bg-opacity-70 focus:outline-none text-white font-bold py-2 px-4 rounded">
-                                Вернуться к списку
+                                Отмена
                             </button>
                         </div>
                     </div>

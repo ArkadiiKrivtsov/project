@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('bayers_name');
-            $table->integer('phone');
+            $table->string('phone', 10);
             $table->bigInteger('apartment_id')->unsigned()->index();
-            $table->bigInteger('bank_id')->unsigned()->index();
+            $table->bigInteger('bank_id')->unsigned()->index()->nullable();
             $table->timestamps();
 
             $table->foreign('bank_id')->references('id')->on('banks')->onDelete('cascade');

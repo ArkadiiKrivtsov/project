@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('title')
-    Административный раздел
+    Редактор товаров
 @endsection
 
 @section('content')
@@ -31,7 +31,7 @@
                 </thead>
                 <tbody>
                     @foreach ($apartments as $apartment)
-                        @include('blocks.admin_section_table_line', ['apartment' => $apartment])
+                        @include('blocks.product_editor_table_line', ['apartment' => $apartment])
                     @endforeach
                 </tbody>
             </table>

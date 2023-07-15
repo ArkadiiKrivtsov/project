@@ -9,9 +9,4 @@ class Bank extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'first_payment',
-        'percent',
-    ];
 }

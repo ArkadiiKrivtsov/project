@@ -41,8 +41,16 @@
                             </li>
                             <li class="menu-item menu-blog"><a href="/catalog">Каталог</a>
                             </li>
-                            <li class="menu-item menu-blog"><a href="/admin_section">Административный раздел</a>
+                            @auth
+                            <li class="menu-item menu-blog"><a href="/banks">Список банков</a>
                             </li>
+                            <li class="menu-item menu-blog"><a href="/admin_section">Редактор товаров</a>
+                            </li>
+                            <li class="menu-item menu-blog"><a href="/orders">Актуальные заказы</a>
+                            </li>
+                            <li class="menu-item menu-blog"><a href="/users">Список сотрудников</a>
+                            </li>
+                            @endauth
                         </ul>
                     </nav>
                     <!-- .header-main-nav-->
