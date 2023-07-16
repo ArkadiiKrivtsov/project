@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('title')
-    Редактор товаров
+    Список квартир
 @endsection
 
 @section('content')
